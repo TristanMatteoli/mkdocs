@@ -120,7 +120,20 @@
             <div class="section">
               
                 <h2 id="architecture-generale">Architecture générale</h2>
+<p>Voici l'architecture générale du site de recherche de stage :  </p>
+<p><img alt="screenshot" src="../img/screen.png" />  </p>
+<ul>
+<li>En se connectant au site web depuis la page d'accueil qui est la page de recherche de stage, nous pouvons accéder aux onglets de notification, messages et de profil.</li>
+<li>Depuis la première couche, on peux accéder à deux onglets qui sont Les éléments d'évaluation et la documentation.</li>
+<li>L'onglet éléments d'évaluation nous permet d'acceder aux informations sur le rapport de stage ou sur la soutenance.</li>
+</ul>
 <h2 id="mise-en-exergue-du-modele-mvc">Mise en exergue du modèle MVC</h2>
+<ul>
+<li>Nous avons utilisés un modèle MVC afin de séparer les composants.</li>
+<li>Les utilisateurs vont être des modèles, les stages devaient théoriquement être des modèles aussi. Ce modèle MVC nous permet d'afficher le contenu des pages via des vues (dashboard, header, footer...)</li>
+<li>Le controlleur va permettre lui de crée les vues. Nous avons également utilisé un driver MYSQL afin de permettre à MYSQL d'être remplacé.</li>
+<li>En plus de tout ça nous utilisons des middleware pour l'authentification. Cela permet que lorsque l'utilisateur se connecte, un middleware sera utilisé pour dire que nous avons été connectés avec succès. Lorsque l'utilisateur ira sur une page qui demande une authentification, celle-ci va voir si la connection de l'utilisateur a déjà été vérifiée au part avant ou non.</li>
+</ul>
               
             </div>
           </div>
