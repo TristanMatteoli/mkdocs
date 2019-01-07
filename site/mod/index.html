@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Modèles - Documentation du projet PHP</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Mod\u00e8les";
+    var mkdocs_page_input_path = "mod.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documentation du projet PHP</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Accueil</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Modèles</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#modele-conceptuel">Modèle conceptuel</a></li>
+    
+
+    <li class="toctree-l2"><a href="#modele-physique">Modèle physique</a></li>
+    
+
+    <li class="toctree-l2"><a href="#script-de-base-de-donnee">Script de base de donnée</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../diag/">Diagramme</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../arch/">Architecture</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../install/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../cred/">Crédits</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documentation du projet PHP</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Modèles</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="modele-conceptuel">Modèle conceptuel</h2>
+<h2 id="modele-physique">Modèle physique</h2>
+<p><img alt="screenshot" src="../img/screenshot.png" /></p>
+<h2 id="script-de-base-de-donnee">Script de base de donnée</h2>
+<pre><code>-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2.1
+-- http://www.phpmyadmin.net
+--
+-- Client :  localhost
+-- Généré le :  Lun 07 Janvier 2019 à 18:06
+-- Version du serveur :  5.7.24-0ubuntu0.16.04.1
+-- Version de PHP :  7.0.32-0ubuntu0.16.04.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `A2018M3104G20`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ETUDIANT`
+--
+
+CREATE TABLE `ETUDIANT` (
+  `matricule_etudiant` int(11) NOT NULL,
+  `nom_etudiant` varchar(50) NOT NULL,
+  `prenom_etudiant` varchar(50) NOT NULL,
+  `dateNaissance_etudiant` date NOT NULL,
+  `villeNaissance_etudiant` varchar(50) NOT NULL,
+  `paysNaissance_etudiant` varchar(50) NOT NULL,
+  `Sexe_etudiant` varchar(50) NOT NULL,
+  `dateInscription_etudiant` date NOT NULL,
+  `ancienEtablissement_etudiant` varchar(70) NOT NULL,
+  `photo_etudiant` varchar(100) NOT NULL,
+  `adresse_etudiant` varchar(100) NOT NULL,
+  `codePostal_etudiant` int(11) NOT NULL,
+  `ville_etudiant` varchar(70) NOT NULL,
+  `TelMobile_etudiant` int(11) NOT NULL,
+  `TelFixe_etudiant` int(11) NOT NULL,
+  `email_etudiant` varchar(70) NOT NULL,
+  `droit_etudiant` varchar(30) NOT NULL,
+  `id_promotion` int(11) NOT NULL,
+  `login` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `GROUPE`
+--
+
+CREATE TABLE `GROUPE` (
+  `id_td` int(11) NOT NULL,
+  `nom_td` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Contenu de la table `GROUPE`
+--
+
+INSERT INTO `GROUPE` (`id_td`, `nom_td`) VALUES
+(1, 'TDA'),
+(2, 'TDB'),
+(3, 'TDC'),
+(4, 'TDD');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `PROFESSEUR`
+--
+
+CREATE TABLE `PROFESSEUR` (
+  `matricule_professeur` int(11) NOT NULL,
+  `nom_professeur` varchar(50) NOT NULL,
+  `prenom_professeur` varchar(50) NOT NULL,
+  `adresse_professeur` varchar(50) NOT NULL,
+  `codePostale_professeur` int(11) NOT NULL,
+  `ville_professeur` varchar(50) NOT NULL,
+  `telMobile_professeur` int(11) NOT NULL,
+  `telFixe_professeur` int(11) NOT NULL,
+  `email_professeur` varchar(50) NOT NULL,
+  `droit_professeur` varchar(30) NOT NULL,
+  `password_professeur` varchar(50) NOT NULL,
+  `login_professeur` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `PROMOTION`
+--
+
+CREATE TABLE `PROMOTION` (
+  `id_promotion` int(11) NOT NULL,
+  `nom_promotion` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Contenu de la table `PROMOTION`
+--
+
+INSERT INTO `PROMOTION` (`id_promotion`, `nom_promotion`) VALUES
+(1, 'P1'),
+(2, 'P2'),
+(3, 'P4'),
+(4, 'P3'),
+(5, 'P5'),
+(6, 'P6');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `RESPONSABLE_ETUDIANT`
+--
+
+CREATE TABLE `RESPONSABLE_ETUDIANT` (
+  `id_responsable` int(11) NOT NULL,
+  `nom_responsable` varchar(50) NOT NULL,
+  `prenom_responsable` varchar(50) NOT NULL,
+  `ville_responsable` varchar(50) NOT NULL,
+  `adresse_responsable` varchar(50) NOT NULL,
+  `codePostale_responsable` int(11) NOT NULL,
+  `telMobile_responsable` int(11) NOT NULL,
+  `email_responsable` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Contenu de la table `RESPONSABLE_ETUDIANT`
+--
+
+INSERT INTO `RESPONSABLE_ETUDIANT` (`id_responsable`, `nom_responsable`, `prenom_responsable`, `ville_responsable`, `adresse_responsable`, `codePostale_responsable`, `telMobile_responsable`, `email_responsable`) VALUES
+(1, 'Eleve', 'Eleve2', 'Nîmes', '76 rue', 30000, 678987655, 'Eleve@eleve.fr');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `RESPONSABLE_PLANNING`
+--
+
+CREATE TABLE `RESPONSABLE_PLANNING` (
+  `matricule_planning` int(11) NOT NULL,
+  `nom_planning` varchar(50) NOT NULL,
+  `prenom_planning` varchar(50) NOT NULL,
+  `login_planning` varchar(50) NOT NULL,
+  `password_planning` varchar(100) NOT NULL,
+  `email_planning` varchar(100) NOT NULL,
+  `telMobile_planning` int(11) NOT NULL,
+  `droit_planning` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `TP`
+--
+
+CREATE TABLE `TP` (
+  `id_tp` int(11) NOT NULL,
+  `nom_tp` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Contenu de la table `TP`
+--
+
+INSERT INTO `TP` (`id_tp`, `nom_tp`) VALUES
+(1, 'TP1'),
+(2, 'TP2'),
+(3, 'TP3');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'eleve@gmail.com', NULL, '$2y$10$3CV57VG8qeecHssx7NCSFudMg4KMOWBWv0UbwT/vl/9rCeR1g9jHy', 'fecfa9f637e0c08df6808baf91e6212416edfdab042e3bfadf0b1560a3085644405fd88cde13abd7f50962bbe430114258a614963d3fcf05e7735ab523b19d31', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users_relations`
+--
+
+CREATE TABLE `users_relations` (
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `etudiant` int(11) DEFAULT NULL,
+  `groupe` int(11) DEFAULT NULL,
+  `professeur` int(11) DEFAULT NULL,
+  `responsable_etudiant` int(11) DEFAULT NULL,
+  `responsable_planning` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Contenu de la table `users_relations`
+--
+
+INSERT INTO `users_relations` (`user_id`, `etudiant`, `groupe`, `professeur`, `responsable_etudiant`, `responsable_planning`) VALUES
+(1, NULL, NULL, NULL, 1, NULL);
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `ETUDIANT`
+--
+ALTER TABLE `ETUDIANT`
+  ADD PRIMARY KEY (`matricule_etudiant`),
+  ADD KEY `ETUDIANT_PROMOTION_FK` (`id_promotion`);
+
+--
+-- Index pour la table `GROUPE`
+--
+ALTER TABLE `GROUPE`
+  ADD PRIMARY KEY (`id_td`);
+
+--
+-- Index pour la table `PROFESSEUR`
+--
+ALTER TABLE `PROFESSEUR`
+  ADD PRIMARY KEY (`matricule_professeur`);
+
+--
+-- Index pour la table `PROMOTION`
+--
+ALTER TABLE `PROMOTION`
+  ADD PRIMARY KEY (`id_promotion`);
+
+--
+-- Index pour la table `RESPONSABLE_ETUDIANT`
+--
+ALTER TABLE `RESPONSABLE_ETUDIANT`
+  ADD PRIMARY KEY (`id_responsable`);
+
+--
+-- Index pour la table `RESPONSABLE_PLANNING`
+--
+ALTER TABLE `RESPONSABLE_PLANNING`
+  ADD PRIMARY KEY (`matricule_planning`);
+
+--
+-- Index pour la table `TP`
+--
+ALTER TABLE `TP`
+  ADD PRIMARY KEY (`id_tp`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_id_unique` (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- Index pour la table `users_relations`
+--
+ALTER TABLE `users_relations`
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `etudiant` (`etudiant`),
+  ADD KEY `groupe` (`groupe`),
+  ADD KEY `professeur` (`professeur`),
+  ADD KEY `responsable_etudiant` (`responsable_etudiant`),
+  ADD KEY `responsable_planning` (`responsable_planning`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `ETUDIANT`
+--
+ALTER TABLE `ETUDIANT`
+  MODIFY `matricule_etudiant` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `GROUPE`
+--
+ALTER TABLE `GROUPE`
+  MODIFY `id_td` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT pour la table `PROFESSEUR`
+--
+ALTER TABLE `PROFESSEUR`
+  MODIFY `matricule_professeur` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `PROMOTION`
+--
+ALTER TABLE `PROMOTION`
+  MODIFY `id_promotion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT pour la table `RESPONSABLE_ETUDIANT`
+--
+ALTER TABLE `RESPONSABLE_ETUDIANT`
+  MODIFY `id_responsable` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT pour la table `RESPONSABLE_PLANNING`
+--
+ALTER TABLE `RESPONSABLE_PLANNING`
+  MODIFY `matricule_planning` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `TP`
+--
+ALTER TABLE `TP`
+  MODIFY `id_tp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `ETUDIANT`
+--
+ALTER TABLE `ETUDIANT`
+  ADD CONSTRAINT `ETUDIANT_PROMOTION_FK` FOREIGN KEY (`id_promotion`) REFERENCES `PROMOTION` (`id_promotion`);
+
+--
+-- Contraintes pour la table `users_relations`
+--
+ALTER TABLE `users_relations`
+  ADD CONSTRAINT `users_relations_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `users_relations_ibfk_2` FOREIGN KEY (`etudiant`) REFERENCES `ETUDIANT` (`matricule_etudiant`),
+  ADD CONSTRAINT `users_relations_ibfk_3` FOREIGN KEY (`groupe`) REFERENCES `GROUPE` (`id_td`),
+  ADD CONSTRAINT `users_relations_ibfk_4` FOREIGN KEY (`professeur`) REFERENCES `PROFESSEUR` (`matricule_professeur`),
+  ADD CONSTRAINT `users_relations_ibfk_5` FOREIGN KEY (`responsable_etudiant`) REFERENCES `RESPONSABLE_ETUDIANT` (`id_responsable`),
+  ADD CONSTRAINT `users_relations_ibfk_6` FOREIGN KEY (`responsable_planning`) REFERENCES `RESPONSABLE_PLANNING` (`matricule_planning`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../diag/" class="btn btn-neutral float-right" title="Diagramme">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Accueil"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../diag/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
